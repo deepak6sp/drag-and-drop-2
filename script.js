@@ -11,6 +11,8 @@ $(document).ready (function() {
     }
   });
 
+
+  // delete row
   $("#template").on("click",".deleteRow", function(e){
     if(confirm("Are you sure you want to delete row ?")){
       $(e.target).closest(".row").remove();
@@ -41,7 +43,7 @@ $(document).ready (function() {
     if (!$('.row.active div').hasClass('column')){
       $(".row.active").append(columnDivs);
       $(".row").removeClass("active");
-    }else{
+    } else {
       alert("columns already exist in this row");
     }
   });
