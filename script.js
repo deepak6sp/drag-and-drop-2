@@ -1,60 +1,61 @@
 $(document).ready (function() {
+  // add row on click
+  var numberOfRows = 1;
+  $(".addRow").on("click",function(){
+    if(numberOfRows >4){
+      alert("you have reached rows limit");
+    } else {
+      $(".row").removeClass("active");
+      $(".inner").append('<div class="row active"><div class="deleteRow">x</div></div> ');
+      numberOfRows++;
+    }
+  });
 
-  	$( "#side_bar img" ).draggable();
+  $("#template").on("click",".deleteRow", function(e){
+    if(confirm("Are you sure you want to delete row ?")){
+      $(e.target).closest(".row").remove();
+      numberOfRows--;
+    }
+    
+  });
 
-  	// drop image to image_area
-  	$( "#template .image_area" ).droppable({
-  		drag: function( event, ui ) {
-  			$( this ).addClass( "background-highlight" );
-  		},
-	    drop: function( event, ui ) {
-	        event.stopPropagation();
-  			event.preventDefault();
-  			$(".image_area").html(ui.draggable["context"]);
-	    }
-      
-    });
+  // highlight row on click
+  $("#template").on("click",".row",function(e){
+    $(".row").removeClass("active");
+    $(e.target).closest(".row").addClass("active");
+  });
 
-    // click on image container to open file
-    $(".image_area").click(function(){
-    	$("#user_image").click();
-    });
+  // add column on click based on conditions
+  $(".addColumn").on("click",function(){
+    
+    var selectedNumber =  prompt("Type columns between 1 to 12");
+    var numOfColumns = parseInt(selectedNumber);
+    while (selectedNumber > 12 || selectedNumber == "undefined" || selectedNumber == ""){
+      selectedNumber =  prompt("Type columns between 1 to 12");
+      numOfColumns = parseInt(selectedNumber);
+    }
 
-
-
-    // display image in image_area
-    $("#user_image").change(function(event){
-    	var readFile = new FileReader();
-    	console.log(readFile);
-    	readFile.onload = function(event){
-    		$(".image_area img").attr('src',event.target.result);
-    	}
-    	readFile.readAsDataURL(event.target.files[0]);
-
-    });
-
-
-
-    // submit form after uploading image and text
-
-    $('form#template').submit(function(event){
-    	event.preventDefault();
-    	console.log("form submitted");
-    	console.log($("textarea[name='user_text']").val());
-    	/*
-    	var formData={
-    		image: "image",
-    		text : $("textarea[name='user_text']").val()
-
-    	};
-    	*/
-    	console.log(new FormData(this));
-    	console.log("submit completed");
-
-    });
+    var columnClass = "col-md-"+Math.trunc(12/numOfColumns);
+    var columnDivs = addColumns(numOfColumns,columnClass);
+   
+    if (!$('.row.active div').hasClass('column')){
+      $(".row.active").append(columnDivs);
+      $(".row").removeClass("active");
+    }else{
+      alert("columns already exist in this row");
+    }
+  });
   
 });
 
+function addColumns(numOfColumns,columnClass){
+    var columnDivs = [];
+    for(var i =1; i<= numOfColumns; i++){
+      var columns = "<div class='column "+columnClass+"'>column </div>";
+      columnDivs.push(columns);
+    }
+    return columnDivs;
+}
 
 
 
