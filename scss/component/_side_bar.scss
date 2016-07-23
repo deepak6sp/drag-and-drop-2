@@ -33,8 +33,9 @@ body{
 	}
 }
 
-.addRow,.addColumn{
+.addRow,.addColumn,.addObject{
 	margin:20px;
+	display: block;
 	&:hover{
 		cursor: pointer;
 		color:red;
