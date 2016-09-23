@@ -1,5 +1,5 @@
 $(document).ready (function() {
-
+  // second js file
   // do not submit form on enter press
   $(window).keydown(function(event){
      /**

@@ -14,6 +14,8 @@ body {
   position: absolute;
   top: 0;
   bottom: 0; }
+  #side_bar .btn {
+    margin-bottom: 20px; }
   #side_bar p {
     height: 50px;
     width: 100%;
@@ -54,8 +56,7 @@ body {
     width: 100%;
     margin: 10px; }
   #template #textbox {
-    width: 100%;
-    margin: 10px; }
+    width: 100%; }
   #template .submit_container {
     text-align: center; }
     #template .submit_container input {
@@ -64,8 +65,10 @@ body {
       color: white; }
       #template .submit_container input:focus {
         outline-color: none; }
-  #template .row.active {
-    border: 1px solid red; }
+  #template .row {
+    cursor: pointer; }
+    #template .row.active {
+      border: 1px solid red; }
   #template .column.active {
     border: 1px solid blue; }
   #template .deleteRow {

@@ -21,7 +21,6 @@
 
 	#textbox{
 		width: 100%;
-		margin: 10px;
 	}
 
 	.submit_container{
@@ -35,8 +34,11 @@
 			}
 		}
 	}
-	.row.active{
-		border:1px solid red;
+	.row{
+		cursor: pointer;
+		&.active{
+			border:1px solid red;
+		}
 	}
 	.column.active{
 		border:1px solid blue;
