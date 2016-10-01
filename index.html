@@ -19,18 +19,48 @@
 
 		<div id="side_bar">
 			<p>Component panel</p>
-			<div class="addRow btn btn-primary">Add row</div>
-			<div class="addColumn btn btn-primary">Add columns </div>
+			<div class="row">
+				<div class="col-sm-6 text-center addRow">
+					<div class="row panel panel-default">
+						row
+					</div>
+				</div>
+				<div class="col-sm-6 text-center addColumn">
+					<div class="col-sm-12 panel panel-default columns">
+					   column
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 text-center">
+					<div class="addRow panel panel-default">
+						<div class="panel-body">text</div>
+					</div>
+				</div>
+				<div class="col-sm-6 text-center">
+					<div class="addColumn panel panel-default">
+						<div class="panel-body">image</div>
+					</div>
+				</div>
+			</div>
+			<!--
 			<p>Text panel</p>
 			<a href="#" class="addObject btn btn-primary" id="textObject">Add text</a>
 			<p>Image panel</p>
 			<div class="addColumn"> drag image and drop into box</div>
 			<img class="addObject" id="imageObject" src="1.jpg"/>
-			
+			-->
+			<p>Settings panel</p>
 		</div>
 
 		<form id="template">
-			<div class="inner"></div>
+			<div class="wrapper">
+				<div class="row initialRow">
+					<div class="col-sm-12">
+						Drag component here
+					</div>
+				</div>
+			</div>
 			<!--
 			<div class="submit_container">
 				<input type="submit" value="save"></input>

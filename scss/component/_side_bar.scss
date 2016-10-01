@@ -10,10 +10,10 @@ body{
 }
 
 #side_bar{
-	border-right:1px solid grey;
-	width:30%;
-	min-width: 200px;
-	position: absolute;
+	border-right: 1px solid grey;
+    min-width: 300px;
+    width: 25%;
+    position: absolute;
     top: 0;
     bottom: 0;
     .btn{
@@ -34,8 +34,20 @@ body{
   		width:150px;
   		padding:10px;
 	}
+	.panel{
+		width: 100px;
+	    height: 50px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+		&.ui-draggable-dragging{
+			background-color:#ccc;
+			color:white;
+		}
+	}
 }
 
+/*
 .addRow,.addColumn,.addObject{
 	margin:20px;
 	display: block;
@@ -45,5 +57,15 @@ body{
 		text-decoration: underline;
 	}
 }
+*/
+
+.addRow,.addColumn{
+	z-index:999;
+	.panel{
+		margin:20px;
+	}
+}
+
+
 
 
