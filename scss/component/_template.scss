@@ -5,28 +5,66 @@
     text-align: center;
     right: 0;
     margin: auto;
+    height:100%;
+    bottom:0;
+    .panel{
+    	margin:0;
+    }
+    .wrapper {
+    	.initialRow{
+    		border:none;
+    		display:flex;
+    		align-items:center;
+    		justify-content:center;
+    	}  	
+		.ui-droppable-active{
+			border:1px dashed red!important;
+			
+		}
+		.initialRow:first-of-type{
+			border:1px dashed #ccc;
+			&:before{
+				display:none;
+			}
+		}
+    }  
     &.ui-droppable-active{
     	.initialRow{
     		border:1px dashed red;
+    		&:before{
+	    		content:"+";
+	    		display:flex;
+	    		align-items:center;
+	    		margin: 0 auto;
+	    	}
     	}
     }
-    .row{
+    &.ui-droppable-hover{
+    	.initialRow{
+    		background:#ccc;
+    	}
+    }
+    .row.initialRow.ui-droppable-active{
+    	border:none;
+    }
+    .row,.initialRow{
     	display:flex;
-    	align-items:center;
-    	justify-content:center;
-		border: 1px solid;
+		border: 1px dashed #ccc;
 		margin-top:10px;
 	    min-height: 100px;
 	    margin-bottom: 10px;
 	    &.ui-droppable-active{
 	    	border:1px dashed red;
 	    }
+	    &.ui-droppable-hover{
+	    	background:#ccc;
+	    }
 
 	}
-	.column{
+	.columns{
+		display:flex;
+		flex:1;
 		border: 1px solid #ccc;
-	    min-height: 200px;
-	    
 	}
 	.image_area{
 		width: 100%;
@@ -47,15 +85,6 @@
 				outline-color: none;
 			}
 		}
-	}
-	.row{
-		cursor: pointer;
-		&.active{
-			border:1px solid red;
-		}
-	}
-	.column.active{
-		border:5px dashed #ccc;
 	}
 	.deleteRow{
 		cursor: pointer;
