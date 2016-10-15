@@ -64,6 +64,15 @@ body{
 	.panel{
 		margin:20px;
 	}
+	.addText {
+		.textArea{
+			resize: none;
+			border: none;
+	    	width: 30px;
+	    	height:25px;
+	    	cursor:pointer;
+	    }
+	}
 }
 
 

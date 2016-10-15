@@ -54,6 +54,12 @@ body {
   z-index: 999; }
   .addRow .panel, .addColumn .panel, .addModule .panel {
     margin: 20px; }
+  .addRow .addText .textArea, .addColumn .addText .textArea, .addModule .addText .textArea {
+    resize: none;
+    border: none;
+    width: 30px;
+    height: 25px;
+    cursor: pointer; }
 
 #template {
   position: absolute;
@@ -77,15 +83,6 @@ body {
     border: 1px dashed #ccc; }
     #template .wrapper .initialRow:first-of-type:before {
       display: none; }
-  #template.ui-droppable-active .initialRow {
-    border: 1px dashed red; }
-    #template.ui-droppable-active .initialRow:before {
-      content: "+";
-      display: flex;
-      align-items: center;
-      margin: 0 auto; }
-  #template.ui-droppable-hover .initialRow {
-    background: #ccc; }
   #template .row.initialRow.ui-droppable-active {
     border: none; }
   #template .row, #template .initialRow {
@@ -101,7 +98,20 @@ body {
   #template .columns {
     display: flex;
     flex: 1;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center; }
+    #template .columns .addText, #template .columns .addImage {
+      border: none; }
+  #template.ui-droppable-active .initialRow {
+    border: 1px dashed red; }
+    #template.ui-droppable-active .initialRow:before {
+      content: "+";
+      display: flex;
+      align-items: center;
+      margin: 0 auto; }
+  #template.ui-droppable-hover .initialRow {
+    background: #ccc; }
   #template .image_area {
     width: 100%;
     margin: 10px; }

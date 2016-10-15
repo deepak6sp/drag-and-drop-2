@@ -15,12 +15,15 @@ $(document).ready (function() {
 			$(".wrapper .row").droppable({
 				accept: ".columns",
 				drop: function(event,ui){
-					$(this).prepend($(ui.draggable).clone());
+					$(this).append($(ui.draggable).clone());
 
 					$(".wrapper .columns").droppable({
-						accept: ".addText",
+						accept: ".addText,.addImage",
 						drop: function(event,ui){
+							$(this).find(".columnText").html("");
 							$(this).prepend($(ui.draggable).clone());
+							$(this).find(".addText").html("<textarea />");
+							$(this).find(".addImage").html("<input type='file' name='pic' />");
 						}
 					});
 

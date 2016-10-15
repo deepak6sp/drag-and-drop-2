@@ -27,22 +27,6 @@
 				display:none;
 			}
 		}
-    }  
-    &.ui-droppable-active{
-    	.initialRow{
-    		border:1px dashed red;
-    		&:before{
-	    		content:"+";
-	    		display:flex;
-	    		align-items:center;
-	    		margin: 0 auto;
-	    	}
-    	}
-    }
-    &.ui-droppable-hover{
-    	.initialRow{
-    		background:#ccc;
-    	}
     }
     .row.initialRow.ui-droppable-active{
     	border:none;
@@ -65,7 +49,29 @@
 		display:flex;
 		flex:1;
 		border: 1px solid #ccc;
-	}
+		align-items: center;
+    	justify-content: center;
+    	.addText,.addImage{
+    		border:none;
+    	}
+	}  
+    &.ui-droppable-active{
+    	.initialRow{
+    		border:1px dashed red;
+    		&:before{
+	    		content:"+";
+	    		display:flex;
+	    		align-items:center;
+	    		margin: 0 auto;
+	    	}
+    	}
+    }
+    &.ui-droppable-hover{
+    	.initialRow{
+    		background:#ccc;
+    	}
+    }
+   
 	.image_area{
 		width: 100%;
 		margin:10px;
