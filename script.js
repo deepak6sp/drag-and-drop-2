@@ -16,6 +16,14 @@ $(document).ready (function() {
 				accept: ".columns",
 				drop: function(event,ui){
 					$(this).prepend($(ui.draggable).clone());
+
+					$(".wrapper .columns").droppable({
+						accept: ".addText",
+						drop: function(event,ui){
+							$(this).prepend($(ui.draggable).clone());
+						}
+					});
+
 				}
 			});
 		}

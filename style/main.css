@@ -50,9 +50,9 @@ body {
 	}
 }
 */
-.addRow, .addColumn {
+.addRow, .addColumn, .addModule {
   z-index: 999; }
-  .addRow .panel, .addColumn .panel {
+  .addRow .panel, .addColumn .panel, .addModule .panel {
     margin: 20px; }
 
 #template {
