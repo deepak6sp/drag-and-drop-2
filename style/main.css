@@ -34,32 +34,21 @@ body {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin: 20px; }
     #side_bar .panel.ui-draggable-dragging {
       background-color: #ccc;
       color: white; }
-
-/*
-.addRow,.addColumn,.addObject{
-	margin:20px;
-	display: block;
-	&:hover{
-		cursor: pointer;
-		color:red;
-		text-decoration: underline;
-	}
-}
-*/
-.addRow, .addColumn, .addModule {
-  z-index: 999; }
-  .addRow .panel, .addColumn .panel, .addModule .panel {
-    margin: 20px; }
-  .addRow .addText .textArea, .addColumn .addText .textArea, .addModule .addText .textArea {
-    resize: none;
-    border: none;
-    width: 30px;
-    height: 25px;
-    cursor: pointer; }
+  #side_bar .componentsPanel .addRow, #side_bar .componentsPanel .addColumn, #side_bar .componentsPanel .addModule {
+    z-index: 999; }
+    #side_bar .componentsPanel .addRow .addText .textArea, #side_bar .componentsPanel .addColumn .addText .textArea, #side_bar .componentsPanel .addModule .addText .textArea {
+      resize: none;
+      border: none;
+      width: 30px;
+      height: 25px;
+      cursor: pointer; }
+  #side_bar .settingsPanel .deleteSelection {
+    display: none; }
 
 #template {
   position: absolute;
@@ -103,6 +92,8 @@ body {
     justify-content: center; }
     #template .columns .addText, #template .columns .addImage {
       border: none; }
+  #template .selectedDiv {
+    border: 1px solid red; }
   #template.ui-droppable-active .initialRow {
     border: 1px dashed red; }
     #template.ui-droppable-active .initialRow:before {

@@ -1,22 +1,22 @@
 #template{
-    position: absolute;
-    left: 300px;
-    width: 600px;
-    text-align: center;
-    right: 0;
-    margin: auto;
-    height:100%;
-    bottom:0;
-    .panel{
-    	margin:0;
-    }
-    .wrapper {
-    	.initialRow{
-    		border:none;
-    		display:flex;
-    		align-items:center;
-    		justify-content:center;
-    	}  	
+  position: absolute;
+  left: 300px;
+  width: 600px;
+  text-align: center;
+  right: 0;
+  margin: auto;
+  height:100%;
+  bottom:0;
+  .panel{
+  	margin:0;
+  }
+  .wrapper {
+  	.initialRow{
+  		border:none;
+  		display:flex;
+  		align-items:center;
+  		justify-content:center;
+  	}  	
 		.ui-droppable-active{
 			border:1px dashed red!important;
 			
@@ -27,50 +27,53 @@
 				display:none;
 			}
 		}
-    }
-    .row.initialRow.ui-droppable-active{
-    	border:none;
-    }
-    .row,.initialRow{
-    	display:flex;
+  }
+  .row.initialRow.ui-droppable-active{
+  	border:none;
+  }
+  .row,.initialRow{
+  	display:flex;
 		border: 1px dashed #ccc;
 		margin-top:10px;
-	    min-height: 100px;
-	    margin-bottom: 10px;
-	    &.ui-droppable-active{
-	    	border:1px dashed red;
-	    }
-	    &.ui-droppable-hover{
-	    	background:#ccc;
-	    }
-
+    min-height: 100px;
+    margin-bottom: 10px;
+    &.ui-droppable-active{
+    	border:1px dashed red;
+    }
+    &.ui-droppable-hover{
+    	background:#ccc;
+    }
 	}
 	.columns{
 		display:flex;
 		flex:1;
 		border: 1px solid #ccc;
 		align-items: center;
-    	justify-content: center;
-    	.addText,.addImage{
-    		border:none;
-    	}
+  	justify-content: center;
+  	.addText,.addImage{
+  		border:none;
+  	}
 	}  
-    &.ui-droppable-active{
-    	.initialRow{
-    		border:1px dashed red;
-    		&:before{
-	    		content:"+";
-	    		display:flex;
-	    		align-items:center;
-	    		margin: 0 auto;
-	    	}
+	.selectedDiv{
+  	border:1px solid red;
+  }
+	
+  &.ui-droppable-active{
+  	.initialRow{
+  		border:1px dashed red;
+  		&:before{
+    		content:"+";
+    		display:flex;
+    		align-items:center;
+    		margin: 0 auto;
     	}
-    }
-    &.ui-droppable-hover{
-    	.initialRow{
-    		background:#ccc;
-    	}
-    }
+  	}
+  }
+  &.ui-droppable-hover{
+  	.initialRow{
+  		background:#ccc;
+  	}
+  }
    
 	.image_area{
 		width: 100%;

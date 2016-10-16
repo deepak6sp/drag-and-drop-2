@@ -40,40 +40,35 @@ body{
 	    display: flex;
 	    align-items: center;
 	    justify-content: center;
+	    margin:20px;
 		&.ui-draggable-dragging{
 			background-color:#ccc;
 			color:white;
 		}
 	}
+	.componentsPanel{
+		.addRow,.addColumn,.addModule{
+			z-index:999;
+			.addText {
+				.textArea{
+					resize: none;
+					border: none;
+			    	width: 30px;
+			    	height:25px;
+			    	cursor:pointer;
+			    }
+			}
+		}
+	}
+	.settingsPanel{
+		.deleteSelection{
+			display:none;
+		}
+	}
 }
 
-/*
-.addRow,.addColumn,.addObject{
-	margin:20px;
-	display: block;
-	&:hover{
-		cursor: pointer;
-		color:red;
-		text-decoration: underline;
-	}
-}
-*/
 
-.addRow,.addColumn,.addModule{
-	z-index:999;
-	.panel{
-		margin:20px;
-	}
-	.addText {
-		.textArea{
-			resize: none;
-			border: none;
-	    	width: 30px;
-	    	height:25px;
-	    	cursor:pointer;
-	    }
-	}
-}
+
 
 
 
