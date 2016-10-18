@@ -1,12 +1,12 @@
 // template div selection
-function componenentSelection(){
-	$("#template .panel").on("click",function(e){
+function componenentSelection(pointer){
+	$(pointer).on("click",function(e){
   	e.stopPropagation();
   	$(".panel").removeClass("selectedDiv");
 		$(this).addClass("selectedDiv");
 		showSettingsPanelAttributes();
 	});
-	
+
 }
 
 // show settings panel attribute on div selection
@@ -24,14 +24,21 @@ function hideSettingsPanelAttribute(){
 
 function textToLabel(pointer) {
   //replace the textarea to text it can be to any text with any formate
-  $(pointer).parent().html("<div onclick='labelToText(this)' class='useOnSave'>" + pointer.value + "</div>");
+  //$(pointer).parent().html("<div onclick='labelToText(this)' class='useOnSave'>" + pointer.value + "</div>");
 }
 
 function labelToText(pointer) {
   // convert from div to textarea
-  $(pointer).parent().html("<textarea onblur='textToLabel(this)' class='useOnSave'>" + $(pointer).text() + "</textarea>");
+  //$(pointer).parent().html("<textarea onblur='textToLabel(this)' class='useOnSave'>" + $(pointer).text() + "</textarea>");
 }
 
+function openEditor(pointer){
+	editor = new nicEditor().panelInstance(pointer);
+}
+
+function closeEditor(pointer){
+	//editor.removeInstance(pointer);
+}
 //input type file  to image
 function inputToImage(pointer) {
   var reader  = new FileReader();
