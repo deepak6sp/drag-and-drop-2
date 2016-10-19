@@ -50,7 +50,7 @@ body {
   #side_bar .settingsPanel .deleteSelection {
     display: none; }
 
-#template {
+#template, #result {
   position: absolute;
   left: 300px;
   width: 600px;
@@ -59,66 +59,66 @@ body {
   margin: auto;
   height: 100%;
   bottom: 0; }
-  #template .panel {
+  #template .panel, #result .panel {
     margin: 0; }
-  #template .wrapper .initialRow {
+  #template .wrapper .initialRow, #result .wrapper .initialRow {
     border: none;
     display: flex;
     align-items: center;
     justify-content: center; }
-  #template .wrapper .ui-droppable-active {
+  #template .wrapper .ui-droppable-active, #result .wrapper .ui-droppable-active {
     border: 1px dashed red !important; }
-  #template .wrapper .initialRow:first-of-type {
+  #template .wrapper .initialRow:first-of-type, #result .wrapper .initialRow:first-of-type {
     border: 1px dashed #ccc; }
-    #template .wrapper .initialRow:first-of-type:before {
+    #template .wrapper .initialRow:first-of-type:before, #result .wrapper .initialRow:first-of-type:before {
       display: none; }
-  #template .row.initialRow.ui-droppable-active {
+  #template .row.initialRow.ui-droppable-active, #result .row.initialRow.ui-droppable-active {
     border: none; }
-  #template .row, #template .initialRow {
+  #template .row, #template .initialRow, #result .row, #result .initialRow {
     display: flex;
     border: 1px dashed #ccc;
     margin-top: 10px;
     min-height: 100px;
     margin-bottom: 10px; }
-    #template .row.ui-droppable-active, #template .initialRow.ui-droppable-active {
+    #template .row.ui-droppable-active, #template .initialRow.ui-droppable-active, #result .row.ui-droppable-active, #result .initialRow.ui-droppable-active {
       border: 1px dashed red; }
-    #template .row.ui-droppable-hover, #template .initialRow.ui-droppable-hover {
+    #template .row.ui-droppable-hover, #template .initialRow.ui-droppable-hover, #result .row.ui-droppable-hover, #result .initialRow.ui-droppable-hover {
       background: #ccc; }
-  #template .columns {
+  #template .columns, #result .columns {
     display: flex;
     flex: 1;
     border: 1px solid #ccc;
     align-items: center;
     justify-content: center; }
-    #template .columns .addText, #template .columns .addImage {
+    #template .columns .addText, #template .columns .addImage, #result .columns .addText, #result .columns .addImage {
       border: none; }
-      #template .columns .addText img, #template .columns .addImage img {
+      #template .columns .addText img, #template .columns .addImage img, #result .columns .addText img, #result .columns .addImage img {
         width: 100%; }
-  #template .selectedDiv {
+  #template .selectedDiv, #result .selectedDiv {
     border: 1px solid red; }
-  #template.ui-droppable-active .initialRow {
+  #template.ui-droppable-active .initialRow, #result.ui-droppable-active .initialRow {
     border: 1px dashed red; }
-    #template.ui-droppable-active .initialRow:before {
+    #template.ui-droppable-active .initialRow:before, #result.ui-droppable-active .initialRow:before {
       content: "+";
       display: flex;
       align-items: center;
       margin: 0 auto; }
-  #template.ui-droppable-hover .initialRow {
+  #template.ui-droppable-hover .initialRow, #result.ui-droppable-hover .initialRow {
     background: #ccc; }
-  #template .image_area {
+  #template .image_area, #result .image_area {
     width: 100%;
     margin: 10px; }
-  #template #textbox {
+  #template #textbox, #result #textbox {
     width: 100%; }
-  #template .submit_container {
+  #template .submit_container, #result .submit_container {
     text-align: center; }
-    #template .submit_container input {
+    #template .submit_container input, #result .submit_container input {
       background: #3D7212;
       width: 100px;
       color: white; }
-      #template .submit_container input:focus {
+      #template .submit_container input:focus, #result .submit_container input:focus {
         outline-color: none; }
-  #template .deleteRow {
+  #template .deleteRow, #result .deleteRow {
     cursor: pointer;
     position: absolute;
     right: -35px;
@@ -128,3 +128,8 @@ body {
     width: 20px;
     line-height: 17px;
     background-color: #ddd; }
+
+#result {
+  position: relative;
+  margin: auto 7%;
+  top: 500px; }

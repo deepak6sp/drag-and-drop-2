@@ -48,4 +48,13 @@ $(document).ready (function() {
   	$("#template .selectedDiv").remove();
   	hideSettingsPanelAttribute();
   });
+
+  // form submit
+  $("form").on("submit",function(e){
+    e.preventDefault();
+    $("#template div").removeClass("ui-draggable ui-draggable-handle ui-droppable panel panel-default");
+    $("#template .initialRow").remove();
+    $("#result").text($("#template .wrapper").html());
+
+  });
 });

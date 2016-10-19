@@ -1,4 +1,4 @@
-#template{
+#template,#result{
   position: absolute;
   left: 300px;
   width: 600px;
@@ -110,4 +110,10 @@
 	    background-color: #ddd;
 	}
 
+}
+
+#result{
+  position: relative;
+  margin: auto 7%;
+  top: 500px
 }
