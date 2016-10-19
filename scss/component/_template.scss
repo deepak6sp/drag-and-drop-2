@@ -16,10 +16,10 @@
   		display:flex;
   		align-items:center;
   		justify-content:center;
-  	}  	
+  	}
 		.ui-droppable-active{
 			border:1px dashed red!important;
-			
+
 		}
 		.initialRow:first-of-type{
 			border:1px dashed #ccc;
@@ -53,11 +53,11 @@
   	.addText,.addImage{
   		border:none;
   	}
-	}  
+	}
 	.selectedDiv{
   	border:1px solid red;
   }
-	
+
   &.ui-droppable-active{
   	.initialRow{
   		border:1px dashed red;
@@ -74,7 +74,7 @@
   		background:#ccc;
   	}
   }
-   
+
 	.image_area{
 		width: 100%;
 		margin:10px;
@@ -108,4 +108,3 @@
 	}
 
 }
-

@@ -1,6 +1,5 @@
 
 $(document).ready (function() {
-  var editor;
   /* left side bar control panel*/
   $("#side_bar .panel").draggable({
       helper: "clone",
@@ -22,20 +21,20 @@ $(document).ready (function() {
             drop: function(event,ui){
               $(this).find(".columnText").html("");
               $(this).prepend($(ui.draggable).clone());
-              $(this).find(".addText").html("<textarea onfocus='openEditor(this)' onblur='closeEditor(this)' class='useOnSave' />");
+              $(this).find(".addText").html("<textarea onblur='textToLabel(this)' class='useOnSave' />");
               $(this).find(".addImage").html("<input class='image' type='file' name='pic' onchange='inputToImage(this)' />");
               // add selectedDiv class on div selection click
-						  componenentSelection(this);
+						  componenentSelection();
             }
 
           });
           // add selectedDiv class on div selection click
-			  	componenentSelection(this);
+			  	componenentSelection();
         }
 
       });
      // add selectedDiv class on div selection click
-	  	componenentSelection(this);
+	  	componenentSelection();
     }
   });
 
