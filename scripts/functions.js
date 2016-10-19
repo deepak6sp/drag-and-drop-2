@@ -7,7 +7,6 @@ function componenentSelection(){
 		$(this).addClass("selectedDiv");
 		showSettingsPanelAttributes();
 	});
-
 }
 
 // show settings panel attribute on div selection
@@ -16,12 +15,10 @@ function showSettingsPanelAttributes(){
 	$(".deleteSelection").hide().show(200);
 }
 
-
 // hide  setting panel after action is done
 function hideSettingsPanelAttribute(){
 	$(".settingsPanel div").hide();
 }
-
 
 function textToLabel(pointer) {
   //replace the textarea to text it can be to any text with any formate
