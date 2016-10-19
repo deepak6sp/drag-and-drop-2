@@ -92,6 +92,8 @@ body {
     justify-content: center; }
     #template .columns .addText, #template .columns .addImage {
       border: none; }
+      #template .columns .addText img, #template .columns .addImage img {
+        width: 100%; }
   #template .selectedDiv {
     border: 1px solid red; }
   #template.ui-droppable-active .initialRow {

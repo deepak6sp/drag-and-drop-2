@@ -52,6 +52,9 @@
   	justify-content: center;
   	.addText,.addImage{
   		border:none;
+      img{
+        width: 100%;
+      }
   	}
 	}
 	.selectedDiv{

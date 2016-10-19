@@ -1,5 +1,6 @@
 // template div selection
 function componenentSelection(){
+	$(".addImage").addClass("ui-resizable");
 	$("#template .panel").on("click",function(e){
   	e.stopPropagation();
   	$(".panel").removeClass("selectedDiv");
@@ -37,7 +38,7 @@ function inputToImage(pointer) {
   var reader  = new FileReader();
   var file = pointer.files[0];
   reader.addEventListener("load", function () {
-     $(pointer).parent().html("<img src='" + reader.result + "' onclick='imageToInput(this)'/>");
+     $(pointer).parent().html("<img src='" + reader.result + "'/>");
   }, false);
 
   if (file) {

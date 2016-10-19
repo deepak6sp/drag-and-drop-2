@@ -5,6 +5,13 @@ $(document).ready (function() {
       helper: "clone",
       revert: true
   });
+
+  // unselect everything and close settings panel
+  $("#template").on("click",function(e){
+  	e.stopPropagation();
+  	$(".panel").removeClass("selectedDiv");
+    hideSettingsPanelAttribute();
+  });
   /*actual control panel that use for template export*/
   $( "#template" ).droppable({
     accept: ".row",
@@ -23,6 +30,7 @@ $(document).ready (function() {
               $(this).prepend($(ui.draggable).clone());
               $(this).find(".addText").html("<textarea onblur='textToLabel(this)' class='useOnSave' />");
               $(this).find(".addImage").html("<input class='image' type='file' name='pic' onchange='inputToImage(this)' />");
+
               // add selectedDiv class on div selection click
 						  componenentSelection();
             }
@@ -43,5 +51,7 @@ $(document).ready (function() {
   	$("#template .selectedDiv").remove();
   	hideSettingsPanelAttribute();
   });
+
+  $(".addImage").resizable();
 
 });
