@@ -30,16 +30,13 @@ $(document).ready (function() {
               $(this).prepend($(ui.draggable).clone());
               $(this).find(".addText").html("<textarea onblur='textToLabel(this)' class='useOnSave' />");
               $(this).find(".addImage").html("<input class='image' type='file' name='pic' onchange='inputToImage(this)' />");
-
               // add selectedDiv class on div selection click
 						  componenentSelection();
             }
-
           });
           // add selectedDiv class on div selection click
 			  	componenentSelection();
         }
-
       });
      // add selectedDiv class on div selection click
 	  	componenentSelection();
@@ -51,7 +48,4 @@ $(document).ready (function() {
   	$("#template .selectedDiv").remove();
   	hideSettingsPanelAttribute();
   });
-
-  $(".addImage").resizable();
-
 });
