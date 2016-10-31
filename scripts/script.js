@@ -53,8 +53,16 @@ $(document).ready (function() {
   $("form").on("submit",function(e){
     e.preventDefault();
     $("#template div").removeClass("ui-draggable ui-draggable-handle ui-droppable panel panel-default");
-    $("#template .initialRow").remove();
-    $("#result").text($("#template .wrapper").html());
+    if(!$(".wrapper div:first-child").hasClass("initialRow")){
+      $("#template .initialRow").remove();
+    }
 
+    //$("#result").text($("#template .wrapper").html());
   });
+
+  // preview template
+  $("#preview_button a").on("click", function(){
+    var previewWindow = window.open("/preview.html");
+  });
+
 });

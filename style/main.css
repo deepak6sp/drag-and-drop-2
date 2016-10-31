@@ -114,7 +114,7 @@ body {
     text-align: center; }
     #template .submit_container input, #result .submit_container input {
       background: #3D7212;
-      width: 100px;
+      width: 80px;
       color: white; }
       #template .submit_container input:focus, #result .submit_container input:focus {
         outline-color: none; }
@@ -130,6 +130,4 @@ body {
     background-color: #ddd; }
 
 #result {
-  position: relative;
-  margin: auto 7%;
   top: 500px; }
