@@ -64,11 +64,9 @@
 			</div>
 			<div class="submit_container">
 				<input class="btn btn-primary" type="submit" value="save" ></input>
-        <a class="btn btn-primary" id="preview_button">preview</a>
+        <a target="_blank" href="/preview.php" class="btn btn-primary" id="preview_button">preview</a>
 			</div>
 		</form>
-
-    <div id="result"></div>
 
 	</div>
 </body>

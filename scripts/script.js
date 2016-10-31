@@ -52,10 +52,24 @@ $(document).ready (function() {
   // form submit
   $("form").on("submit",function(e){
     e.preventDefault();
-    $("#template div").removeClass("ui-draggable ui-draggable-handle ui-droppable panel panel-default");
+    //("#template div").removeClass("ui-draggable ui-draggable-handle ui-droppable panel panel-default");
     if(!$(".wrapper div:first-child").hasClass("initialRow")){
       $("#template .initialRow").remove();
     }
+
+    var formData = {};
+    formData.id = "1";
+    formData.structure=$("#template .wrapper").html();
+    $.ajax({
+        method: "POST",
+        url: "http://localhost/draganddrop2/php/post.php",
+        dataType:"html",
+        data: formData
+    })
+    .done(function( data ) {
+          console.log("succesfully posted");
+    });
+
 
     //$("#result").text($("#template .wrapper").html());
   });

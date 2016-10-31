@@ -8,15 +8,16 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script type="text/javascript" src="scripts/script.js"></script>
-  <script type="text/javascript" src="scripts/functions.js"></script>
+  <script type="text/javascript" src="scripts/preview.js"></script>
   <script>
 
   </script>
 </head>
 <body>
-    <div id="preview">
+    <div id="template" style="position:relative;left:0px">
+        <div class="wrapper">
 
+        </div>
     </div>
 </body>
 </html>
