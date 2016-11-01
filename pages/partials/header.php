@@ -11,6 +11,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../scripts/main.js"></script>
   <script type="text/javascript" src="../scripts/functions.js"></script>
-  <script type="text/javascript" src="../scripts/preview.js"></script>
+
 </head>
 <body>

@@ -71,13 +71,20 @@ $(document).ready (function() {
           console.log("succesfully posted");
     });
 
-
     //$("#result").text($("#template .wrapper").html());
   });
 
-  // preview template
-  $("#preview_button a").on("click", function(){
-    var previewWindow = window.open("/preview.html");
+
+  // load template if exist
+  var id = $("#hidden_id").val();
+  $.ajax({
+      method: "GET",
+      url: "http://localhost/draganddrop2/php/get.php?id="+id,
+      dataType:"html"
+  })
+  .done(function( data ) {
+        $("#template .wrapper").prepend(data);
   });
+
 
 });

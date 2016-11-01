@@ -8,4 +8,5 @@
     </div>
 </div>
 
+<script type="text/javascript" src="../scripts/preview.js"></script>
 <?php include "partials/footer.php"; ?>
