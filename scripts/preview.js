@@ -7,6 +7,7 @@ $(document).ready (function() {
         dataType:"html"
     })
     .done(function( data ) {
+          console.log(data);
           $("#template .wrapper").html(data);
     });
   }
