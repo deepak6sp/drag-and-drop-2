@@ -1,10 +1,10 @@
 'use strict';
- 
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var jsdoc = require('gulp-jsdoc');
- 
+
 gulp.task('sass', function () {
   return gulp.src('./scss/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -30,4 +30,4 @@ gulp.task('doc', function (cb) {
         .pipe(gulp.dest('./documentation'));;
 });
 
-gulp.task('default',["serve"]);
+gulp.task('default',["sass"]);
