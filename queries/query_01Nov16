@@ -1,0 +1,2 @@
+CREATE DATABASE DragAndDrop;
+CREATE TABLE templates (id int(11) NOT NULL AUTO_INCREMENT, PRIMARY KEY (id), structure varchar(255));
