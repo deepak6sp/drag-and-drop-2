@@ -1,11 +1,14 @@
 $(document).ready (function() {
-  $.ajax({
-      method: "GET",
-      url: "http://localhost/draganddrop2/php/get.php",
-      dataType:"html"
-  })
-  .done(function( data ) {
-        $("#template .wrapper").html(data);
-  });
+  var id = $("#hidden_id").val();
+  if(id != "createNew"){
+    $.ajax({
+        method: "GET",
+        url: "http://localhost/draganddrop2/php/get.php?id="+id,
+        dataType:"html"
+    })
+    .done(function( data ) {
+          $("#template .wrapper").html(data);
+    });
+  }
 
 });

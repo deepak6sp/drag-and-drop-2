@@ -1,5 +1,6 @@
 
 $(document).ready (function() {
+
   /* left side bar control panel*/
   $("#side_bar .panel").draggable({
       helper: "clone",
@@ -58,7 +59,7 @@ $(document).ready (function() {
     }
 
     var formData = {};
-    formData.id = "1";
+    formData.id = $("#hidden_id").val();
     formData.structure=$("#template .wrapper").html();
     $.ajax({
         method: "POST",

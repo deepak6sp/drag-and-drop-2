@@ -4,11 +4,24 @@ $id =  $_POST['id'];
 $structure = "'".$_POST['structure']."'";
 //echo $structure;
 
-$sql = "INSERT INTO `templates`(`id`, `structure`) VALUES ($id,$structure)";
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+// check record already exist
+$getSql = "SELECT id FROM templates where id=$id";
+$result = $conn->query($getSql);
+
+if ($result->num_rows > 0) {
+  $postSql = "UPDATE templates SET structure=$structure WHERE id=$id";
+  if ($conn->query($postSql) === TRUE) {
+      echo "Record updated successfully";
+  } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  $postSql = "INSERT INTO `templates`(`structure`) VALUES ($structure)";
+  if ($conn->query($postSql) === TRUE) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 }
 
 $conn->close();

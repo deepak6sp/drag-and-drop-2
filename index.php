@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,66 +10,43 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script type="text/javascript" src="scripts/script.js"></script>
-  <script type="text/javascript" src="scripts/functions.js"></script>
-  <script>
-
-  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts/modal.js"></script>
 </head>
 <body>
-	<div id="main">
-		<div id="side_bar">
-			<p>Components panel</p>
-			<div class="componentsPanel">
-				<div class="row">
-					<div class="col-sm-6 text-center addRow">
-						<div class="row panel panel-default">
-							row
-						</div>
-					</div>
-					<div class="col-sm-6 text-center addColumn">
-						<div class="columns panel panel-default">
-						   <div class="columnText">column</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 text-center addModule">
-						<div class="addText panel panel-default">
-							text
-						</div>
-					</div>
-					<div class="col-sm-6 text-center addModule">
-						<div class="addImage panel panel-default">
-							image
-						</div>
-					</div>
-				</div>
-			</div>
-			<p>Settings panel</p>
-			<div class="settingsPanel">
-				<div class="row ">
-	        <div class="col-md-6 text-center deleteButton">
-	          <button class="deleteSelection panel panel-default">Delete</button>
-	        </div>
-			  </div>
-			</div> <!-- end settingspanel -->
-		</div> <!-- end sidebar -->
 
-		<form id="template">
-			<div class="wrapper">
-				<div class="initialRow">
-					<div class="col-sm-12">
-						+
-					</div>
-				</div>
-			</div>
-			<div class="submit_container">
-				<input class="btn btn-primary" type="submit" value="save" ></input>
-        <a target="_blank" href="/preview.php" class="btn btn-primary" id="preview_button">preview</a>
-			</div>
-		</form>
+  <button id="openModal" type="button" class="btn btn-info btn-lg hidden" data-toggle="modal" data-target="#selectModalOption">Open Modal</button>
+  <!-- Modal -->
+  <form class="modal fade" id="selectModalOption" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Select Options</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <input class="btn btn-primary" type="submit" value="Create New" name="id" ></input>
+            </div>
+            <div class="col-sm-6">
+              or select template
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </form>
 
-	</div>
 </body>
 </html>
